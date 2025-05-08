@@ -2,7 +2,7 @@
 FROM php:8.1-apache
 
 # Copia todo el código del proyecto al directorio raíz del servidor web
-COPY . /var/www/html/
+COPY . /var/www/index.php/
 
 # Habilita el módulo de reescritura de Apache (útil para .htaccess)
 RUN a2enmod rewrite
