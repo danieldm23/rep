@@ -1,11 +1,13 @@
-# Usa una imagen oficial de PHP con Apache
 FROM php:8.1-apache
 
-# Copia todo el código del proyecto al directorio raíz del servidor web
-COPY . /var/www/html/index.php/
+# Instalar la extensión mysqli
+RUN docker-php-ext-install mysqli
 
-# Habilita el módulo de reescritura de Apache (útil para .htaccess)
-RUN a2enmod rewrite
+# Copiar tu código al contenedor
+COPY . /var/www/html/
 
-# Expón el puerto HTTP
-EXPOSE 80
+# Dar permisos adecuados
+RUN chown -R www-data:www-data /var/www/html
+
+# Habilitar módulos de Apache si necesitas (opcional)
+# RUN a2enmod rewrite
