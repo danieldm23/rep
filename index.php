@@ -1,6 +1,6 @@
 <?php
 // Parámetros de conexión
-$host = "10.42.0.18"; // Cambiado desde "192.168.0.112"
+$host = "192.168.0.101"; // Cambiado desde "192.168.0.112"
 $usuario = "ALPHA";
 $contrasena = "12369874"; // Asegúrate de que esta contraseña sea correcta
 $base_datos = "PruebaAlpha";
