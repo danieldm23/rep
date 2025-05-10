@@ -7,7 +7,7 @@ RUN docker-php-ext-install mysqli
 COPY . /var/www/html/index.php
 
 # Dar permisos adecuados
-RUN chown -R www-data:www-data /var/www/html/index.php
+RUN chown -R www-data:www-data /var/www/html
 
 # Habilitar módulos de Apache si necesitas (opcional)
 # RUN a2enmod rewrite
